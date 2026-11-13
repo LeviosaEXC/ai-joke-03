@@ -13,11 +13,11 @@ import { join } from 'node:path';
 
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-// The joke: the agent never admits ignorance — it invents instead, in an
-// escalation (four libraries, two protocols, a small programming language)
-// that lands on the most absurd invention last. Every word earns its place;
-// nothing explains the joke.
-const JOKE = `My coding agent has never once said "I don't know." It has, however, invented four libraries, two protocols, and a small programming language.`;
+// The joke: the agent spends an hour confidently criticising "my code" —
+// code it wrote itself last Tuesday. The reversal is the pronoun:
+// "my code" becomes "that code". Two sentences, no explanation,
+// the last three words carry the turn.
+const JOKE = `My coding agent spent an hour explaining why my code was a mess. It wrote that code last Tuesday.`;
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), JOKE, 'utf8');
